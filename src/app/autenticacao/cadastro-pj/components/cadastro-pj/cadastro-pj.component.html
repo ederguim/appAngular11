@@ -1,0 +1,44 @@
+<form [formGroup]="form" fxLayoutAlign="center center" novalidate>
+    <mat-list>
+        <mat-list-item>
+            <mat-form-field>
+                <input matInput placeholder="CNPJ" formControlName="cnpj" mascara="99.999.999/999-99">
+            </mat-form-field>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-form-field>
+                <input matInput placeholder="Razão Social" formControlName="razaoSocial">
+            </mat-form-field>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-form-field>
+                <input matInput placeholder="CPF" formControlName="cpf" mascara="999.999.999-99">
+            </mat-form-field>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-form-field>
+                <input matInput placeholder="Nome" formControlName="nome">
+            </mat-form-field>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-form-field>
+                <input matInput placeholder="Senha" formControlName="senha">
+            </mat-form-field>
+            <span matTooltip="A senha deve conter ao menos 6 digitos">
+                <mat-icon>Help</mat-icon>
+            </span>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-form-field>
+                <input matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+        </mat-list-item>
+        <mat-list-item fxLayoutAlign="center center">
+            <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="cadastrarPj()">
+                Cadastrar
+            </button>
+            &nbsp;
+            <button mat-raised-button [routerLink]="['/login']" routerLinkActive="router-link-active">Voltar</button>
+        </mat-list-item>
+    </mat-list>
+</form>
